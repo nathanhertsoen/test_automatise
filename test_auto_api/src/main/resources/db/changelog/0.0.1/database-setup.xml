@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="claire" id="database_setup">
+        <createTable tableName="pokemon">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="taille" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="poids" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="letype" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="person">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="firstname" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birthday" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cp" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+        <rollback>
+            <dropTable tableName="person"/>
+        </rollback>
+
+
+        <createTable tableName="adressePostal">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="taille" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="poids" type="DECIMAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="letype" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="adressePostal"/>
+        </rollback>
+
+    </changeSet>
+</databaseChangeLog>
