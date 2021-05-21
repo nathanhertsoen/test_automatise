@@ -1,6 +1,7 @@
 # Sonarqube
 
-J'ai suivi ces tutos https://www.youtube.com/watch?v=jI6sQ1XVqtI mais je ne suis pas sûr d'avoir quelque chose de fonctionnel à montrer avec Sonarqube
+J'ai suivi ces tutos https://www.youtube.com/watch?v=jI6sQ1XVqtI mais je ne suis pas sûr d'avoir quelque chose de fonctionnel à montrer avec Sonarqube,
+J'avais une interface sur mon localhost et j'ai même réussi à faire un sonar-scanner après avoir bagarré avec des erreurs, mais je n'ai rien eu après le sonar-scanner
 
 #Question / réponse :
 Le carré : 
